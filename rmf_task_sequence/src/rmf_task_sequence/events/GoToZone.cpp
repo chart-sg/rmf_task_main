@@ -1,4 +1,3 @@
-
 #include <rmf_task_sequence/events/GoToZone.hpp>
 #include <rmf_task_sequence/events/GoToPlace.hpp>
 
@@ -132,8 +131,8 @@ Header GoToZone::Description::generate_header(
     rmf_task::standard_waypoint_name(graph, *start_wp_opt);
 
   const auto model = make_model(initial_state, parameters);
-  const auto duration = model ? model->invariant_duration()
-    : rmf_traffic::Duration(0);
+  const auto duration = model ? model->invariant_duration() :
+    rmf_traffic::Duration(0);
 
   return Header(
     "Go to zone " + _pimpl->zone_name,
