@@ -26,6 +26,7 @@ public:
     std::string group_hint;
     std::optional<double> orientation_hint;
     std::vector<std::string> preferred_waypoints;
+    std::optional<bool> boundary_closure;
   };
 
   /// Make a GoToZone description using a zone name and optional modifiers.
